@@ -39,8 +39,8 @@ class FileManager {
       this.#showCurrentDirectory();
     });
 
-    this.#eventEmitter.on('invalidInput', () => {
-      console.log('Invalid input');
+    this.#eventEmitter.on('invalidInput', (error) => {
+      console.log('Invalid input:', error.message);
       this.#showCurrentDirectory();
     });
   }
@@ -88,7 +88,7 @@ class FileManager {
       this.#eventEmitter.emit('commandSuccess', result);
     } catch (error) {
       if (error.name === 'InvalidInputError') {
-        this.#eventEmitter.emit('invalidInput');
+        this.#eventEmitter.emit('invalidInput', error);
       } else {
         this.#eventEmitter.emit('commandError', error);
       }
