@@ -2,7 +2,7 @@ import { join, basename } from 'node:path';
 import { pipeline } from 'node:stream/promises';
 import { createWriteStream, createReadStream } from 'node:fs';
 import { unlink, stat, mkdir } from 'fs/promises';
-import { Command } from './command.js';
+import { Command } from '../command.js';
 
 class MvCommand extends Command {
   constructor(currentDir, source, destination) {

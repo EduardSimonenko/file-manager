@@ -1,14 +1,15 @@
-import { UpCommand } from './commands/up-command.js';
-import { ExitCommand } from './commands/exit-command.js';
-import { CdCommand } from './commands/cd-command.js';
-import { LsCommand } from './commands/ls-command.js';
-import { CatCommand } from './commands/cat-command.js';
-import { AddCommand } from './commands/add-command.js';
-import { MkdirCommand } from './commands/mkdir-command.js';
-import { RnCommand } from './commands/rn-command.js';
-import { CopyCommand } from './commands/copy-command.js';
-import { MvCommand } from './commands/mv-command.js';
-import { RmCommand } from './commands/rm-command.js';
+import { UpCommand } from '../commands/navigation/up-command.js';
+import { CdCommand } from '../commands/navigation/cd-command.js';
+import { LsCommand } from '../commands/navigation/ls-command.js';
+import { MkdirCommand } from '../commands/file-operation/mkdir-command.js';
+import { CopyCommand } from '../commands/file-operation/copy-command.js';
+import { CatCommand } from '../commands/file-operation/cat-command.js';
+import { AddCommand } from '../commands/file-operation/add-command.js';
+import { RnCommand } from '../commands/file-operation/rn-command.js';
+import { MvCommand } from '../commands/file-operation/mv-command.js';
+import { RmCommand } from '../commands/file-operation/rm-command.js';
+import { ExitCommand } from '../commands/basic/exit-command.js';
+
 import { InvalidInputError } from './invalid-input-error.js';
 
 class CommandFactory {

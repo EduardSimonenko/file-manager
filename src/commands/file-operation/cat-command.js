@@ -1,6 +1,6 @@
 import { join } from 'node:path';
 import { createReadStream } from 'node:fs';
-import { Command } from './command.js';
+import { Command } from '../command.js';
 
 class CatCommand extends Command {
   constructor(currentDir, filePath) {

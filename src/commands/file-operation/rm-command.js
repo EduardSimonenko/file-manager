@@ -1,6 +1,6 @@
 import { join } from 'node:path';
 import { rm } from 'node:fs/promises';
-import { Command } from './command.js';
+import { Command } from '../command.js';
 
 class RmCommand extends Command {
   constructor(currentDir, filePath) {

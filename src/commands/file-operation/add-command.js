@@ -1,6 +1,6 @@
 import { join } from 'node:path';
 import { writeFile } from 'node:fs/promises';
-import { Command } from './command.js';
+import { Command } from '../command.js';
 
 class AddCommand extends Command {
   constructor(currentDir, filePath) {

@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { Command } from './command.js';
+import { Command } from '../command.js';
 
 class LsCommand extends Command {
   async execute() {

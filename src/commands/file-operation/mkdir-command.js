@@ -1,6 +1,6 @@
 import { join } from 'node:path';
 import { mkdir } from 'node:fs/promises';
-import { Command } from './command.js';
+import { Command } from '../command.js';
 
 class MkdirCommand extends Command {
   constructor(currentDir, folderName) {

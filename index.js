@@ -1,8 +1,8 @@
 import { stdin } from 'node:process';
 import { EventEmitter } from 'node:events';
-import { CommandInvoker } from './lib/command-invoker.js';
-import { CommandFactory } from './lib/command-factory.js';
-import { ExitCommand } from './lib/commands/exit-command.js';
+import { CommandInvoker } from './src/lib/command-invoker.js';
+import { CommandFactory } from './src/lib/command-factory.js';
+import { ExitCommand } from './src/commands/basic/exit-command.js';
 
 class FileManager {
   #commandInvoker;
@@ -85,7 +85,7 @@ class FileManager {
         this.#commandFactory.setCurrentDir(command.updateWorkingDir);
       }
 
-      this.#eventEmitter.emit('commandSuccess', result); 
+      this.#eventEmitter.emit('commandSuccess', result);
     } catch (error) {
       if (error.name === 'InvalidInputError') {
         this.#eventEmitter.emit('invalidInput');

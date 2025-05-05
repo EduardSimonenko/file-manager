@@ -1,6 +1,6 @@
 import { dirname } from 'node:path';
 import fs from 'node:fs/promises';
-import { Command } from './command.js';
+import { Command } from '../command.js';
 
 class UpCommand extends Command {
   async execute() {

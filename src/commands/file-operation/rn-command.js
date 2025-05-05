@@ -1,6 +1,6 @@
 import { join, dirname } from 'node:path';
 import { rename } from 'node:fs/promises';
-import { Command } from './command.js';
+import { Command } from '../command.js';
 
 class RnCommand extends Command {
   constructor(currentDir, filePath, newName) {
