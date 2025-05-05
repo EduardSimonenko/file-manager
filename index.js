@@ -82,9 +82,10 @@ class FileManager {
 
       if (command.updateWorkingDir) {
         this.#currentDir = command.updateWorkingDir;
+        this.#commandFactory.setCurrentDir(command.updateWorkingDir);
       }
 
-      this.#eventEmitter.emit('commandSuccess', result);
+      this.#eventEmitter.emit('commandSuccess', result); 
     } catch (error) {
       if (error.name === 'InvalidInputError') {
         this.#eventEmitter.emit('invalidInput');
